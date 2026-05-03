@@ -21,12 +21,13 @@ Export-Package: \
 -buildpath:  \
     org.osgi.service.component.annotations; version='[1.3,1.4)', \
 	org.eclipse.osgi, \
-	biz.aQute.bnd;version=4.0;packages=*, \
+	biz.aQute.bnd;version='[6.4.0,6.4.1)';packages=*, \
 	osgi.enroute.base.api;version=latest
 
 -testpath: \
 	osgi.enroute.junit.wrapper, \
 	osgi.enroute.hamcrest.wrapper, \
+	biz.aQute.bnd;version='[6.4.0,6.4.1)',\
 
 -includeresource: {readme.md}, LICENSE.txt=${build}/licenses/ASL-2.0.txt
 
