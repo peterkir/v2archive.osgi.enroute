@@ -9,7 +9,7 @@ Conditional-Package: aQute.lib*
 
 Private-Package: osgi.enroute.*.test
 Import-Package: com.gargoylesoftware.*;version=0,*
-#Test-Cases: ${test-cases}
+Test-Cases: ${test-cases}
 
 
 -workingset base,test
@@ -62,7 +62,8 @@ runsystempackages: org.junit;version=4.11, junit.framework;version=3.8
 	osgi.enroute.twitter.bootstrap.webresource;version=snapshot,\
 	osgi.enroute.web.simple.provider;version='[1.3.3,1.3.4)',\
 	osgi.enroute.webconsole.xray.provider;version=snapshot,\
-	biz.aQute.bndlib;version='[3.3.0,3.3.1)',\
+	biz.aQute.bndlib;version='[6.4.0,6.4.1)',\
+	javax.annotation-api;version='[1.3.2,1.3.3)',\
 	org.apache.commons.io;version='[2.5.0,2.5.1)',\
 	org.apache.felix.scr;version='[2.0.6,2.0.7)',\
 	org.apache.felix.webconsole;version='[4.2.16,4.2.17)'
@@ -82,6 +83,8 @@ Require-Capability:		\
 	osgi.enroute.webresource; \
 		filter:='(osgi.enroute.webresource=/twitter/bootstrap)'; \
 		resource:List<String>='css/bootstrap.css'
+
+-runtimeout: 60000
 
 -runtrace: true
 -baseline:
