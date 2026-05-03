@@ -9,7 +9,7 @@ Conditional-Package: aQute.lib*
 
 Private-Package: osgi.enroute.*.test
 Import-Package: com.gargoylesoftware.*;version=0,*
-#Test-Cases: ${test-cases}
+Test-Cases: ${test-cases}
 
 
 -workingset base,test
@@ -82,6 +82,8 @@ Require-Capability:		\
 	osgi.enroute.webresource; \
 		filter:='(osgi.enroute.webresource=/twitter/bootstrap)'; \
 		resource:List<String>='css/bootstrap.css'
+
+-runtimeout: 60000
 
 -runtrace: true
 -baseline:
